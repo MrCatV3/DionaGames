@@ -1,0 +1,30 @@
+﻿<Window x:Class="DionaGames.UserPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DionaGames"
+        mc:Ignorable="d"
+        Title="UserPanel" Height="844" Width="390" Icon="C:\Users\rasul\source\repos\DionaGames\DionaGames\images\DIO.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFE7E7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.ColumnSpan="2" BorderBrush="#F9BFBF" BorderThickness="0 0 0 4">
+            <TextBlock Text="Пользователь" FontFamily="/DionaGames;component/#Neucha" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+        <Border Grid.Column="0" Grid.Row="2" BorderThickness="0" CornerRadius="20" Margin="30" Background="#F9BFBF">
+            <Button Grid.Column="1" Grid.Row="6" Content="Просмотр мест" Background="#F9BFBF" Margin="7" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}"/>
+        </Border>
+        <Border Grid.Column="1" Grid.Row="2" BorderThickness="0" CornerRadius="20" Margin="30" Background="#F9BFBF">
+            <Button Grid.Column="1" Grid.Row="6" Content="Аренда мест" Background="#F9BFBF" Margin="7" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}"/>
+        </Border>
+    </Grid>
+</Window>
