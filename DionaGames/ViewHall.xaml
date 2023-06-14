@@ -59,34 +59,34 @@
                                 </Grid>
                                 <Grid Grid.Row="2">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="3*"/>
-                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="27*"/>
+                                        <ColumnDefinition Width="20*"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Text="Процессор:" Margin="45 0 0 0"/>
+                                    <TextBlock Grid.Column="0" Text="Процессор:" Margin="40 0 0 0"/>
                                     <TextBlock Grid.Column="1" Text="{Binding Path=Processor}"/>
                                 </Grid>
                                 <Grid Grid.Row="3">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="3*"/>
-                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="27*"/>
+                                        <ColumnDefinition Width="20*"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Text="Оперативная память:" Margin="45 0 0 0"/>
+                                    <TextBlock Grid.Column="0" Text="Оперативная память:" Margin="40 0 0 0"/>
                                     <TextBlock Grid.Column="1" Text="{Binding Path=Ram}"/>
                                 </Grid>
                                 <Grid Grid.Row="4">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="3*"/>
-                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="27*"/>
+                                        <ColumnDefinition Width="20*"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Text="Видеокарта:" Margin="45 0 0 0"/>
+                                    <TextBlock Grid.Column="0" Text="Видеокарта:" Margin="40 0 0 0"/>
                                     <TextBlock Grid.Column="1" Text="{Binding Path=VideoCard}"/>
                                 </Grid>
                                 <Grid Grid.Row="5">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="3*"/>
-                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="27*"/>
+                                        <ColumnDefinition Width="20*"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Text="Состояние:" Margin="45 0 0 0"/>
+                                    <TextBlock Grid.Column="0" Text="Состояние:" Margin="40 0 0 0"/>
                                     <TextBlock Grid.Column="1" Text="{Binding Path=Status}"/>
                                 </Grid>
                                 <Border Background="#9D553E" Grid.Row="7" BorderThickness="0" Margin="100 5 100 15" CornerRadius="10">
