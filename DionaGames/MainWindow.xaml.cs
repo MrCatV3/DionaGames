@@ -23,12 +23,25 @@ namespace DionaGames
         public MainWindow()
         {
             InitializeComponent();
-
+            App.GlobalVariable = 0;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            if(tb_l.Text=="admin" && tb_p.Text=="admin123")
+            {
+                AdmiPanel ad = new AdmiPanel();
+                ad.Show();
+                this.Close();
+
+                App.GlobalVariable = 1;
+            }
+            else
+            {
+                UserPanel us = new UserPanel();
+                us.Show();
+                this.Close();
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

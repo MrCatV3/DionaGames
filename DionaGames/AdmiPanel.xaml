@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DionaGames"
         mc:Ignorable="d"
-        Title="AdmiPanel" Height="844" Width="390" Icon="\images\DIO.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="AdmiPanel" Height="844" Width="390" Icon="images/DIO.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Background="#FFE7E7">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -21,10 +21,10 @@
             <TextBlock Text="Администратор" FontFamily="/DionaGames;component/#Neucha" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </Border>
         <Border Grid.Column="0" Grid.Row="2" BorderThickness="0" CornerRadius="20" Margin="30" Background="#F9BFBF">
-            <Button Grid.Column="1" Grid.Row="6" Content="Информация о местах" Background="#F9BFBF" Margin="7" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}"/>
+            <Button Grid.Column="1" Grid.Row="6" Content="Информация о местах" Background="#F9BFBF" Margin="7" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}" Click="Button_Click"/>
         </Border>
         <Border Grid.Column="1" Grid.Row="2" BorderThickness="0" CornerRadius="20" Margin="30" Background="#F9BFBF">
-            <Button Grid.Column="1" Grid.Row="6" Content="Просмотр мест" Background="#F9BFBF" Margin="7" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}"/>
+            <Button Grid.Column="1" Grid.Row="6" Content="Просмотр мест" Background="#F9BFBF" Margin="7" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}" Click="Button_Click_1"/>
         </Border>
     </Grid>
 </Window>

@@ -23,5 +23,19 @@ namespace DionaGames
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            UserPanel up = new UserPanel();
+            up.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            UserPanel up = new UserPanel();
+            up.Show();
+            this.Close();
+        }
     }
 }

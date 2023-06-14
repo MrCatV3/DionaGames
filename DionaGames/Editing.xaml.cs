@@ -23,5 +23,19 @@ namespace DionaGames
         {
             InitializeComponent();
         }
+
+        private void clic_Click(object sender, RoutedEventArgs e)
+        {
+            AdmiPanel up = new AdmiPanel();
+            up.Show();
+            this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AdmiPanel up = new AdmiPanel();
+            up.Show();
+            this.Close();
+        }
     }
 }

@@ -39,5 +39,21 @@ namespace DionaGames
         {
 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (App.GlobalVariable == 1)
+            {
+                AdmiPanel ad = new AdmiPanel();
+                ad.Show();
+                this.Close();
+            }
+            else
+            {
+                UserPanel us = new UserPanel();
+                us.Show();
+                this.Close();
+            }
+        }
     }
 }

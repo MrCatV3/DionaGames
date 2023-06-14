@@ -24,7 +24,7 @@
             <TextBlock Text="Аренда" FontFamily="/DionaGames;component/#Neucha" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40 0 0 0"/>
         </Border>
         <Border Grid.Column="2" Grid.Row="0" BorderThickness="0" CornerRadius="0" Margin="4" Background="#FFE7E7">
-            <Button Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" Background="#FFE7E7" Margin="3" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}">
+            <Button Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" Background="#FFE7E7" Margin="3" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}" Click="Button_Click_1">
                 <Image Source="/images/3ef626583a92073c.png"/>
             </Button>
         </Border>
@@ -40,7 +40,7 @@
             <TextBox Grid.Column="1" Grid.Row="3" Background="#F0A968" Margin="5" BorderThickness="0"/>
         </Border>
         <Border Grid.Column="1" Grid.Row="5" BorderThickness="0" CornerRadius="20" Margin="20" Background="#F9BFBF">
-            <Button Grid.Column="1" Grid.Row="6" Content="Аренда" Background="#F9BFBF" Margin="7" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}"/>
+            <Button Grid.Column="1" Grid.Row="6" Content="Аренда" Background="#F9BFBF" Margin="7" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}" Click="Button_Click"/>
         </Border>
     </Grid>
 </Window>

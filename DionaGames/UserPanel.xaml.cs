@@ -23,5 +23,19 @@ namespace DionaGames
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ViewHall vh = new ViewHall();
+            vh.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Rent r = new Rent();
+            r.Show();
+            this.Close();
+        }
     }
 }
