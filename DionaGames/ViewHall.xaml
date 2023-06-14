@@ -5,26 +5,98 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DionaGames"
         mc:Ignorable="d"
-        Title="ViewHall" Height="844" Width="390" Icon="C:\Users\rasul\source\repos\DionaGames\DionaGames\images\DIO.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="ViewHall" Height="844" Width="390" Icon="\images\DIO.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Background="#FFE7E7">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1.2*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="15*"/>
         </Grid.RowDefinitions>
-        <Border Grid.ColumnSpan="3" BorderBrush="#F9BFBF" BorderThickness="0 0 0 4">
-            <TextBlock Text="Просмотр зала" FontFamily="/DionaGames;component/#Neucha" FontSize="24" Margin="40 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-        </Border>
-        <Border Grid.Column="2" Grid.Row="0" BorderThickness="0" CornerRadius="0" Margin="4" Background="#FFE7E7">
-            <Button Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" Background="#FFE7E7" Margin="3" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}">
-                <Image Source="/images/3ef626583a92073c.png"/>
-            </Button>
-        </Border>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.ColumnSpan="3" BorderBrush="#F9BFBF" BorderThickness="0 0 0 4">
+                <TextBlock Text="Просмотр зала" FontFamily="/DionaGames;component/#Neucha" FontSize="24" Margin="40 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            </Border>
+            <Border Grid.Column="2" Grid.Row="0" BorderThickness="0" CornerRadius="0" Margin="4" Background="#FFE7E7">
+                <Button Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" Background="#FFE7E7" Margin="3" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}">
+                    <Image Source="/images/3ef626583a92073c.png"/>
+                </Button>
+            </Border>
+        </Grid>
+        <ScrollViewer Style="{DynamicResource ScrollViewerStyle1}" Grid.Row="1">
+            <ItemsControl x:Name="ItemC" Grid.Row="1">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="1"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="#f9bfbf" BorderThickness="5" CornerRadius="10" Margin="5 0 5 0">
+                            <Grid Background="#f9bfbf" Margin="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="3*"/>
+                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="5*"/>
+                                    <RowDefinition Height="3*"/>
+                                    <RowDefinition Height="1*"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="{Binding Path=Name}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Grid.Column="2" Text="{Binding Path=Place}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Grid>
+                                <Grid Grid.Row="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="Процессор:" Margin="45 0 0 0"/>
+                                    <TextBlock Grid.Column="1" Text="{Binding Path=Processor}"/>
+                                </Grid>
+                                <Grid Grid.Row="3">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="Оперативная память:" Margin="45 0 0 0"/>
+                                    <TextBlock Grid.Column="1" Text="{Binding Path=Ram}"/>
+                                </Grid>
+                                <Grid Grid.Row="4">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="Видеокарта:" Margin="45 0 0 0"/>
+                                    <TextBlock Grid.Column="1" Text="{Binding Path=VideoCard}"/>
+                                </Grid>
+                                <Grid Grid.Row="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="Состояние:" Margin="45 0 0 0"/>
+                                    <TextBlock Grid.Column="1" Text="{Binding Path=Status}"/>
+                                </Grid>
+                                <Border Background="#9D553E" Grid.Row="7" BorderThickness="0" Margin="100 5 100 15" CornerRadius="10">
+                                    <Button Background="#9D553E" BorderThickness="0" Style="{DynamicResource ButtonStyle2}" Margin="3" Click="Button_Click" Content="Аренда"/>
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
     </Grid>
 </Window>

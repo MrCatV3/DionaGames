@@ -58,6 +58,7 @@
     <Compile Include="AdmiPanel.xaml.cs">
       <DependentUpon>AdmiPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Device.cs" />
     <Compile Include="Editing.xaml.cs">
       <DependentUpon>Editing.xaml</DependentUpon>
     </Compile>
