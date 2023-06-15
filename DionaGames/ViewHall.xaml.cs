@@ -29,6 +29,7 @@ namespace DionaGames
         public ViewHall()
         {
             InitializeComponent();
+            if (App.GlobalVariable == 0) Admin.Text = "No";
             Device[] lists;
 
             MySqlConnection con = Connect.Neko();
