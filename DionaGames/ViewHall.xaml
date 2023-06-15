@@ -52,8 +52,11 @@
         </Style>
         <Style x:Key="AdminX" TargetType="TextBlock">
             <Style.Triggers>
-                <DataTrigger Binding="{Binding Path=Name}" Value="ПК">
-                    <Setter Property="Visibility" Value="Visible"/>
+                <DataTrigger Binding="{Binding Path=Name}" Value="PlayStation 5">
+                    <Setter Property="Visibility" Value="Hidden"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=Name}" Value="Xbox Series X">
+                    <Setter Property="Visibility" Value="Hidden"/>
                 </DataTrigger>
             </Style.Triggers>
         </Style>
@@ -120,7 +123,7 @@
                                         <ColumnDefinition Width="27*"/>
                                         <ColumnDefinition Width="20*"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Style="{DynamicResource AdminX}" Visibility="Hidden" Text="Процессор:" Margin="40 0 0 0"/>
+                                    <TextBlock Grid.Column="0" Style="{DynamicResource AdminX}" Text="Процессор:" Margin="40 0 0 0"/>
                                     <TextBlock Grid.Column="1" Text="{Binding Path=Processor}"/>
                                 </Grid>
                                 <Grid Grid.Row="4">
@@ -128,7 +131,7 @@
                                         <ColumnDefinition Width="27*"/>
                                         <ColumnDefinition Width="20*"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Style="{DynamicResource AdminX}" Visibility="Hidden" Text="Оперативная память:" Margin="40 0 0 0"/>
+                                    <TextBlock Grid.Column="0" Style="{DynamicResource AdminX}" Text="Оперативная память:" Margin="40 0 0 0"/>
                                     <TextBlock Grid.Column="1" Text="{Binding Path=Ram}"/>
                                 </Grid>
                                 <Grid Grid.Row="5">
@@ -136,7 +139,7 @@
                                         <ColumnDefinition Width="27*"/>
                                         <ColumnDefinition Width="20*"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Style="{DynamicResource AdminX}" Visibility="Hidden" Text="Видеокарта:" Margin="40 0 0 0"/>
+                                    <TextBlock Grid.Column="0" Style="{DynamicResource AdminX}" Text="Видеокарта:" Margin="40 0 0 0"/>
                                     <TextBlock Grid.Column="1" Text="{Binding Path=VideoCard}"/>
                                 </Grid>
                                 <Grid Grid.Row="6">
