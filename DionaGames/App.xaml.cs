@@ -15,5 +15,6 @@ namespace DionaGames
     {
         public static int GlobalVariable { get; set; }
         public static string GlobalVariableString { get; set; }
+        public static string GlobalVariableString2 { get; set; }
     }
 }

@@ -36,7 +36,7 @@
         <Border Grid.Column="1" Grid.Row="6" BorderThickness="0" CornerRadius="20" Margin="40" Background="#F9BFBF">
             <Button Grid.Column="1" Grid.Row="6" Content="Вход" Background="#F9BFBF" Margin="7" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}" Click="Button_Click"/>
         </Border>
-        <Border Grid.Column="1" Grid.Row="7" BorderThickness="0" CornerRadius="20" Margin="40" Background="#F9BFBF">
+        <Border Grid.Column="1" Grid.Row="7" BorderThickness="0" CornerRadius="20" Margin="40 0 40 80" Background="#F9BFBF">
             <Button Grid.Column="1" Grid.Row="6" Content="Регистрация" Background="#F9BFBF" Margin="7" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}" Click="Button_Click_1"/>
         </Border>
     </Grid>

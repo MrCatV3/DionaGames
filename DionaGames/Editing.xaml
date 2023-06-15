@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="0.5*"/>
@@ -31,21 +31,44 @@
             </Button>
         </Border>
         <TextBlock Grid.Column="0" Grid.Row="1" Text="Номер места " FontFamily="/DionaGames;component/#Neucha" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <Border Grid.Column="1" Grid.Row="1" CornerRadius="15" Margin="10" Background="#F0A968">
+        <ComboBox x:Name="Combo" Style="{DynamicResource ComboBoxStyle1}" Margin="5" BorderThickness="0" SelectionChanged="Combo_SelectionChanged">
+        </ComboBox>
+        </Border>
+        
         <TextBlock Grid.Column="0" Grid.Row="2" Text="Processor" FontFamily="/DionaGames;component/#Neucha" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <Border Grid.Column="1" Grid.Row="2" CornerRadius="15" Margin="10" Background="#F0A968">
-            <TextBox Grid.Column="1" Grid.Row="2" Background="#F0A968" Margin="5" BorderThickness="0"/>
+            <ComboBox x:Name="ComboProc" Style="{DynamicResource ComboBoxStyle1}" Margin="5" BorderThickness="0" SelectionChanged="Combo2_SelectionChanged">
+                <ComboBoxItem Content="AMD Ryzen 9 5950X"/>
+                <ComboBoxItem Content="Intel Core i9 13900K"/>
+                <ComboBoxItem Content="Intel Core i9 13900KF"/>
+                <ComboBoxItem Content="AMD Ryzen 9 7950X"/>
+            </ComboBox>
         </Border>
         <TextBlock Grid.Column="0" Grid.Row="3" Text="RAM" FontFamily="/DionaGames;component/#Neucha" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <Border Grid.Column="1" Grid.Row="3" CornerRadius="15" Margin="10" Background="#F0A968">
-            <TextBox Grid.Column="1" Grid.Row="3" Background="#F0A968" Margin="5" BorderThickness="0"/>
+            <ComboBox x:Name="ComboRam" Style="{DynamicResource ComboBoxStyle1}" Margin="5" BorderThickness="0" SelectionChanged="Combo2_SelectionChanged">
+                <ComboBoxItem Content="16 ГБ"/>
+                <ComboBoxItem Content="32 ГБ"/>
+                <ComboBoxItem Content="64 ГБ"/>
+                <ComboBoxItem Content="128 ГБ"/>
+            </ComboBox>
         </Border>
         <TextBlock Grid.Column="0" Grid.Row="4" Text="Video card" FontFamily="/DionaGames;component/#Neucha" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <Border Grid.Column="1" Grid.Row="4" CornerRadius="15" Margin="10" Background="#F0A968">
-            <TextBox Grid.Column="1" Grid.Row="4" Background="#F0A968" Margin="5" BorderThickness="0"/>
+            <ComboBox x:Name="ComboVid" Style="{DynamicResource ComboBoxStyle1}" Margin="5" BorderThickness="0" SelectionChanged="Combo2_SelectionChanged">
+                <ComboBoxItem Content="NVIDIA GeForce RTX 4090"/>
+                <ComboBoxItem Content="NVIDIA GeForce RTX 4080"/>
+                <ComboBoxItem Content="NVIDIA GeForce RTX 4070"/>
+                <ComboBoxItem Content="NVIDIA GeForce RTX 3090"/>
+            </ComboBox>
         </Border>
         <TextBlock Grid.Column="0" Grid.Row="5" Text="Place status" FontFamily="/DionaGames;component/#Neucha" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <Border Grid.Column="1" Grid.Row="5" CornerRadius="15" Margin="10" Background="#F0A968">
-            <TextBox Grid.Column="1" Grid.Row="5" Background="#F0A968" Margin="5" BorderThickness="0"/>
+            <ComboBox x:Name="Combo2" Style="{DynamicResource ComboBoxStyle1}" Margin="5" BorderThickness="0" SelectionChanged="Combo2_SelectionChanged">
+                <ComboBoxItem Name="work" Content="Работает"/>
+                <ComboBoxItem Name="rem" Content="Ремонт"/>
+            </ComboBox>
         </Border>
         <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="8" BorderThickness="0" CornerRadius="20" Margin="100 30 100 30" Background="#F9BFBF">
             <Button Grid.Column="1" Grid.Row="6" Content="Сохранить изменения" Background="#F9BFBF" Margin="7" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}" Click="Button_Click"/>

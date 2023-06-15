@@ -26,15 +26,15 @@ namespace DionaGames
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ViewHall vh = new ViewHall();
-            vh.Show();
+            Editing ed = new Editing();
+            ed.Show();
             this.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Editing ed = new Editing();
-            ed.Show();
+            ViewHall vh = new ViewHall();
+            vh.Show();
             this.Close();
         }
     }
