@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DionaGames"
         mc:Ignorable="d"
-        Title="Authorization" Height="844" Width="390" Icon="C:\Users\rasul\source\repos\DionaGames\DionaGames\images\DIO.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+        Title="Authorization" Height="844" Width="390" Icon="\images\DIO.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
     <Grid Background="#FFE7E7">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -31,7 +31,7 @@
         </Border>
         <TextBlock Grid.Column="1" Grid.Row="4" Text="Пароль" Margin="20 0 0 0" FontSize="12" FontFamily="/DionaGames;component/#Neucha" VerticalAlignment="Bottom"/>
         <Border Grid.Column="1" Grid.Row="5" CornerRadius="15" Margin="10" Background="#F0A968">
-            <TextBox x:Name="tb_p" Grid.Column="1" Grid.Row="3" Background="#F0A968" Margin="5" BorderThickness="0"/>
+            <PasswordBox x:Name="tb_p" Grid.Column="1" Grid.Row="3" Background="#F0A968" Margin="5" BorderThickness="0"/>
         </Border>
         <Border Grid.Column="1" Grid.Row="6" BorderThickness="0" CornerRadius="20" Margin="40" Background="#F9BFBF">
             <Button Grid.Column="1" Grid.Row="6" Content="Вход" Background="#F9BFBF" Margin="7" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}" Click="Button_Click"/>

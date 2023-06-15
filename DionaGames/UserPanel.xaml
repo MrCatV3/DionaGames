@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DionaGames"
         mc:Ignorable="d"
-        Title="UserPanel" Height="844" Width="390" Icon="C:\Users\rasul\source\repos\DionaGames\DionaGames\images\DIO.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="UserPanel" Height="844" Width="390" Icon="\images\DIO.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Background="#FFE7E7">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

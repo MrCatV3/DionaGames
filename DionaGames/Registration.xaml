@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DionaGames"
         mc:Ignorable="d"
-        Title="Registration" Height="844" Width="390" Icon="C:\Users\rasul\source\repos\DionaGames\DionaGames\images\DIO.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+        Title="Registration" Height="844" Width="390" Icon="\images\DIO.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
     <Grid Background="#FFE7E7">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -30,23 +30,23 @@
         <TextBlock Grid.Column="1" Grid.Row="0" Text="Регистрация" FontFamily="/DionaGames;component/#Neucha" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="32"/>
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Логин" Margin="20 0 0 0" VerticalAlignment="Bottom" FontSize="12" FontFamily="/DionaGames;component/#Neucha" />
         <Border Grid.Column="1" Grid.Row="2" CornerRadius="15" Margin="10" Background="#F0A968">
-            <TextBox Grid.Column="1" Grid.Row="3" Background="#F0A968" Margin="5" BorderThickness="0"/>
+            <TextBox x:Name="log" Grid.Column="1" Grid.Row="3" Background="#F0A968" Margin="5" BorderThickness="0"/>
         </Border>
         <TextBlock Grid.Column="1" Grid.Row="3" Text="Пароль" Margin="20 0 0 0" VerticalAlignment="Bottom" FontSize="12" FontFamily="/DionaGames;component/#Neucha"/>
         <Border Grid.Column="1" Grid.Row="4" CornerRadius="15" Margin="10" Background="#F0A968">
-            <TextBox Grid.Column="1" Grid.Row="3" Background="#F0A968" Margin="5" BorderThickness="0"/>
+            <PasswordBox x:Name="pas" Grid.Column="1" Grid.Row="3" Background="#F0A968" Margin="5" BorderThickness="0"/>
         </Border>
         <TextBlock Grid.Column="1" Grid.Row="5" Text="Повторите пароль" Margin="20 0 0 0" VerticalAlignment="Bottom" FontSize="12" FontFamily="/DionaGames;component/#Neucha"/>
         <Border Grid.Column="1" Grid.Row="6" CornerRadius="15" Margin="10" Background="#F0A968">
-            <TextBox Grid.Column="1" Grid.Row="3" Background="#F0A968" Margin="5" BorderThickness="0"/>
+            <PasswordBox x:Name="passordTrue" Grid.Column="1" Grid.Row="3" Background="#F0A968" Margin="5" BorderThickness="0"/>
         </Border>
         <TextBlock Grid.Column="1" Grid.Row="7" Text="Номер телефона" Margin="20 0 0 0" VerticalAlignment="Bottom" FontSize="12" FontFamily="/DionaGames;component/#Neucha"/>
         <Border Grid.Column="1" Grid.Row="8" CornerRadius="15" Margin="10" Background="#F0A968">
-            <TextBox Grid.Column="1" Grid.Row="3" Background="#F0A968" Margin="5" BorderThickness="0"/>
+            <TextBox x:Name="phone" Grid.Column="1" Grid.Row="3" Background="#F0A968" Margin="5" BorderThickness="0"/>
         </Border>
         <TextBlock Grid.Column="1" Grid.Row="9" Text="Электронная почта" Margin="20 0 0 0" VerticalAlignment="Bottom" FontSize="12" FontFamily="/DionaGames;component/#Neucha"/>
         <Border Grid.Column="1" Grid.Row="10" CornerRadius="15" Margin="10" Background="#F0A968">
-            <TextBox Grid.Column="1" Grid.Row="3" Background="#F0A968" Margin="5" BorderThickness="0"/>
+            <TextBox x:Name="ema" Grid.Column="1" Grid.Row="3" Background="#F0A968" Margin="5" BorderThickness="0"/>
         </Border>
         <Border Grid.Column="1" Grid.Row="11" BorderThickness="0" CornerRadius="20" Margin="30" Background="#F9BFBF">
             <Button Grid.Column="1" Grid.Row="6" Content="Зарегистроваться" Background="#F9BFBF" Margin="8" BorderThickness="0" FontFamily="/DionaGames;component/#Neucha" Style="{DynamicResource ButtonStyle1}" Click="Button_Click"/>

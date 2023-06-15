@@ -14,5 +14,6 @@ namespace DionaGames
     public partial class App : Application
     {
         public static int GlobalVariable { get; set; }
+        public static string GlobalVariableString { get; set; }
     }
 }

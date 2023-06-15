@@ -1,5 +1,8 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,20 +31,47 @@ namespace DionaGames
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if(tb_l.Text=="admin" && tb_p.Text=="admin123")
+            if(tb_l.Text == "" && tb_p.Password == "")
             {
-                AdmiPanel ad = new AdmiPanel();
-                ad.Show();
-                this.Close();
-
-                App.GlobalVariable = 1;
+                MessageBox.Show("Вы не ввели данные", "Некорректнвый ввод!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else if (tb_l.Text == "" || tb_p.Password == "")
+            {
+                MessageBox.Show("Вы заполнили данные не до конца", "Некорректнвый ввод!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {
-                UserPanel us = new UserPanel();
-                us.Show();
-                this.Close();
+                MySqlConnection con = Connect.Neko();
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand("aboba2", con);
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@p_username", MySqlDbType.VarChar, 50).Value = tb_l.Text;
+                cmd.Parameters.Add("@p_password", MySqlDbType.VarChar, 50).Value = tb_p.Password;
+                cmd.Parameters.Add("@aut", MySqlDbType.VarChar, 255).Direction = ParameterDirection.ReturnValue;
+                cmd.ExecuteNonQuery();
+                App.GlobalVariableString = cmd.Parameters["@aut"].Value.ToString();
+                if (tb_l.Text == "admin" && tb_p.Password == "admin123")
+                {
+                    AdmiPanel ad = new AdmiPanel();
+                    ad.Show();
+                    this.Close();
+
+                    App.GlobalVariable = 1;
+                }
+                else if (App.GlobalVariableString != "false")
+                {
+                    UserPanel us = new UserPanel();
+                    us.Show();
+                    this.Close();
+                }
+                if (App.GlobalVariableString == "false")
+                {
+                    MessageBox.Show("Такого пользователя нет, повторите попытку!", "Такого пользователя нет, повторите попытку!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                con.Close();
             }
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
